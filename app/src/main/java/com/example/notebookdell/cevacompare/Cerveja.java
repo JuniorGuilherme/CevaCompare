@@ -75,7 +75,7 @@ public class Cerveja {
 
     public void adicionaCotacao(int id, float valor){
         lc.get(id).setPrice(valor);
-        lc.get(id).setPrecoMedio(lc.get(id).getPrice()/lc.get(id).getTamanhoMl());
+        lc.get(id).setPrecoMedio((lc.get(id).getPrice()/(lc.get(id).getTamanhoMl()))*1000);
 
     }
 

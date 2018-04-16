@@ -5,12 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.notebookdell.cevacompare.ListaCervejas"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginLeft="15sp"
+    android:layout_marginRight="15sp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Orçamento"/>
+        android:text="Orçamento"
+        android:textAlignment="center"
+        android:textSize="30sp"/>
 
     <ListView
         android:layout_width="match_parent"
@@ -18,4 +22,26 @@
         android:id="@+id/lvCervejas">
     </ListView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5sp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:id="@+id/tvTituloMaisBarata"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCevaMaisBarata"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMenorPreco"
+            android:textSize="20sp"/>
+    </LinearLayout>
 </LinearLayout>

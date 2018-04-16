@@ -1,5 +1,6 @@
 package com.example.notebookdell.cevacompare;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class AdicionarCerveja extends AppCompatActivity {
     Spinner spTamanhos;
@@ -31,9 +33,16 @@ public class AdicionarCerveja extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Cerveja c = new Cerveja();
-                c.adicionaCotacao(spTamanhos.getSelectedItemPosition(), Float.parseFloat(etCotacao.getText().toString()));
-                Intent intencao = new Intent(AdicionarCerveja.this, MainActivity.class);
-                AdicionarCerveja.this.startActivity(intencao);
+                if(!etCotacao.getText().toString().isEmpty()){
+                    c.adicionaCotacao(spTamanhos.getSelectedItemPosition(), Float.parseFloat(etCotacao.getText().toString()));
+                    Intent intencao = new Intent(AdicionarCerveja.this, MainActivity.class);
+                    AdicionarCerveja.this.startActivity(intencao);
+                }else{
+                    Context contexto = getApplicationContext();
+                    int duracao = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(contexto, "Digite algum valor a cerveja." ,duracao);
+                    toast.show();
+                }
             }
         });
 
