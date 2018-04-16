@@ -44,7 +44,6 @@ public class AdapterCerveja extends BaseAdapter {
         View resultView = LayoutInflater.from(context).inflate(R.layout.item_cerveja, viewGroup, false);
         TextView tvNomeCerveja = resultView.findViewById(R.id.tvNomeCerveja);
         TextView tvPrecoMedio = resultView.findViewById(R.id.tvPrecoMedio);
-        EditText etPreco = resultView.findViewById(R.id.etPreco);
 
         Cerveja c = cervejas.get(i);
 
