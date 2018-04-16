@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class ListaCervejas extends AppCompatActivity {
     ListView lvCervejas;
     @Override
@@ -13,6 +15,7 @@ public class ListaCervejas extends AppCompatActivity {
 
         Cerveja c = new Cerveja();
         lvCervejas = findViewById(R.id.lvCervejas);
+        ArrayList<Cerveja> lcc = c.retornaArrayCervejas();
         lvCervejas.setAdapter(new AdapterCerveja(c.retornaArrayCervejas(), this));
     }
 }

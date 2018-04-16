@@ -18,7 +18,6 @@ public class AdicionarCerveja extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicionar_cerveja);
         Cerveja c = new Cerveja();
-        c.carregarCercejas();
         spTamanhos = findViewById(R.id.spTamanhos);
         btnAdicionaCotacao = findViewById(R.id.btnAdicionarCotacao);
         etCotacao = findViewById(R.id.etCotacao);
@@ -32,7 +31,7 @@ public class AdicionarCerveja extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Cerveja c = new Cerveja();
-                c.adicionaCotacao(spTamanhos.getId(), Float.parseFloat(etCotacao.getText().toString()));
+                c.adicionaCotacao(spTamanhos.getSelectedItemPosition(), Float.parseFloat(etCotacao.getText().toString()));
                 Intent intencao = new Intent(AdicionarCerveja.this, MainActivity.class);
                 AdicionarCerveja.this.startActivity(intencao);
             }

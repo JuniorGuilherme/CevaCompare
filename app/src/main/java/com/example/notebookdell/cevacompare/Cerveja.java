@@ -1,5 +1,7 @@
 package com.example.notebookdell.cevacompare;
 
+import android.media.Image;
+
 import java.util.ArrayList;
 
 /**
@@ -11,6 +13,7 @@ public class Cerveja {
     float price;
     float precoMedio;
     String nomeCerveja;
+    Image imagem;
     static ArrayList<Cerveja> lc = new ArrayList<>();
 
     @Override
