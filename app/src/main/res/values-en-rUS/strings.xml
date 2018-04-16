@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ceva Compare</string>
+    <string name="adicionar_cerveja">Add Beer</string>
+    <string name="listar_cervejas">List Beer</string>
+</resources>
