@@ -18,7 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnTelaCotacao = findViewById(R.id.btnTelaCotacao);
         btnTelaLista = findViewById(R.id.btnTelaLista);
-        c.carregarCercejas();
+        if(c.retornaArrayCervejas().isEmpty()){
+            c.carregarCercejas();
+        }
+
 
         btnTelaCotacao.setOnClickListener(new View.OnClickListener() {
             @Override
